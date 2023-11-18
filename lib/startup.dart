@@ -1,4 +1,8 @@
+import 'package:aviz/presentation/screens/login_screen.dart';
 import 'package:aviz/presentation/screens/onboarding_screen.dart';
+import 'package:aviz/presentation/screens/signup_screen.dart';
+import 'package:aviz/presentation/screens/verification_phone_login_screen.dart';
+import 'package:aviz/presentation/screens/verification_phone_signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class Startup extends StatelessWidget {
@@ -6,8 +10,11 @@ class Startup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: OnboardingScreen(),
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Sh',
+      ),
+      home: const VerificationPhoneSignupScreen(),
     );
   }
 }
