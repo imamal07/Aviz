@@ -19,6 +19,26 @@ class MyImagesPath {
   static const String addIcon = 'assets/images/add-icon.png';
   static const String profileIcon = 'assets/images/profile-icon.png';
   static const String searchIcon = 'assets/images/search-icon.png';
+  static const String rightArrow = 'assets/images/arrow-right.png';
+  static const String closeIcon = 'assets/images/close-icon.png';
+  static const String archiveIcon = 'assets/images/archive-icon.png';
+  static const String callIcon = 'assets/images/call-icon.png';
+  static const String cameraIcon = 'assets/images/camera-icon.png';
+  static const String categoryIcon = 'assets/images/category-icon.png';
+  static const String clipboardTextIcon = 'assets/images/clipboard-text-icon.png';
+  static const String documentUploadIcon = 'assets/images/document-upload-icon.png';
+  static const String downArrowIcon = 'assets/images/down-arrow.png';
+  static const String downTriangleIcon = 'assets/images/down-triangle-icon.png';
+  static const String informationIcon = 'assets/images/information-icon.png';
+  static const String locationIcon = 'assets/images/location-icon.png';
+  static const String magicPenIcon = 'assets/images/magic-pen-icon.png';
+  static const String mapIcon = 'assets/images/map-icon.png';
+  static const String messageIcon = 'assets/images/message-icon.png';
+  static const String penIcon = 'assets/images/pen-icon.png';
+  static const String propertiesIcon = 'assets/images/properties-icon.png';
+  static const String shareIcon = 'assets/images/share-icon.png';
+  static const String upTriangleIcon = 'assets/images/up-triangle-icon.png';
+
   static const String hotAds1 = 'assets/images/hot_ads1.jpg';
   static const String hotAds2 = 'assets/images/hot_ads2.jpg';
   static const String recentAds1 = 'assets/images/recent_ads1.jpg';
@@ -53,7 +73,7 @@ class MyTestList {
     }
   ];
 
-  static const List<Map<String,String>> recentAdsList = [
+  static const List<Map<String, String>> recentAdsList = [
     {
       'imagePath': 'assets/images/recent_ads1.jpg',
       'title': 'واحد دوبلکس فول امکانات',
@@ -78,5 +98,20 @@ class MyTestList {
       'description': 'تحویل فوری، ویو عالی به همراه امکانات فول',
       'price': '۸٬۲۰۰٬۰۰۰٬۰۰۰',
     }
+  ];
+
+  static const List<String> firstStepOptionsList = [
+    'اجاره مسکونی',
+    'فروش مسکونی',
+    'فروش دفاتر اداری و تجاری',
+    'اجاره دفاتر اداری و تجاری',
+    'اجاره کوتاه مدت',
+    'پروژه های ساخت و ساز',
+  ];
+
+  static const List<String> secondStepOptionsList = [
+    'فروش آپارتمان',
+    'فروش خانه و ویلا',
+    'فروش زمین و کلنگی',
   ];
 }

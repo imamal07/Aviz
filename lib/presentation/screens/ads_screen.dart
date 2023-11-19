@@ -208,7 +208,7 @@ class AdsScreen extends StatelessWidget {
               ),
             ),
           ],
-        ).toSymmetricPadding(vertical: 20),
+        ).toOnlyPadding(top: 15),
       ),
     );
   }

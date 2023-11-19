@@ -9,11 +9,13 @@ class GenerateNormalTextField extends StatelessWidget {
     required this.hintText,
     required this.onchanged,
     required this.keyboardType,
+    this.horizontalContentPadding = 10,
   });
   final TextEditingController controller;
   final String hintText;
   final Function(String value) onchanged;
   final TextInputType keyboardType;
+  final double horizontalContentPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class GenerateNormalTextField extends StatelessWidget {
       keyboardType: keyboardType,
       textAlign: TextAlign.right,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+        contentPadding: EdgeInsets.symmetric(horizontal: horizontalContentPadding),
         hintText: hintText,
         hintStyle: const TextStyle(
           color: MyColors.lightGrey,

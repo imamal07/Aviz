@@ -6,11 +6,13 @@ extension ToText on String {
           {double size = 14,
           Color color = MyColors.darkGrey,
           FontWeight fontWeight = FontWeight.w400,
-          TextAlign textAlign = TextAlign.right}) =>
+          TextAlign textAlign = TextAlign.right,
+          TextOverflow overflow = TextOverflow.ellipsis}) =>
       Text(
         this,
         textDirection: TextDirection.rtl,
         textAlign: textAlign,
+        overflow: overflow,
         style: TextStyle(
           fontSize: size,
           color: color,

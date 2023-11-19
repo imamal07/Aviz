@@ -1,3 +1,4 @@
+import 'package:aviz/presentation/screens/add_ad_screen.dart';
 import 'package:aviz/presentation/screens/ads_screen.dart';
 import 'package:aviz/presentation/screens/login_screen.dart';
 import 'package:aviz/presentation/screens/onboarding_screen.dart';
@@ -16,8 +17,11 @@ class Startup extends StatefulWidget {
 }
 
 class _StartupState extends State<Startup> {
-  int selectedIndex = 0;
+  int selectedIndex = 3;
   List navBarScreensList = const [
+    AdsScreen(),
+    AddAdScreen(),
+    AdsScreen(),
     AdsScreen(),
   ];
 
@@ -41,6 +45,7 @@ class _StartupState extends State<Startup> {
               selectedIndex = value;
             });
           },
+          elevation: 0,
           items: [
             BottomNavigationBarItem(
               icon: Image.asset(MyImagesPath.profileIcon,
@@ -70,8 +75,8 @@ class _StartupState extends State<Startup> {
               label: 'آویز آگهی ها',
             ),
           ],
-        ),
-        body: navBarScreensList[0],
+        ).toOnlyPadding(bottom: 8),
+        body: navBarScreensList[selectedIndex],
       ),
     );
   }
