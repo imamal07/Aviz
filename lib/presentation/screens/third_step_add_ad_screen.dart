@@ -1,3 +1,4 @@
+import 'package:aviz/presentation/screens/fourth_step_add_ad_screen.dart';
 import 'package:aviz/presentation/widgets/add_ad_screen_appbar.dart';
 import 'package:aviz/presentation/widgets/elevated_button.dart';
 import 'package:aviz/presentation/widgets/switch_with_title.dart';
@@ -31,9 +32,6 @@ class _ThirdStepAddAdScreenState extends State<ThirdStepAddAdScreen> {
     return GestureDetector(
       onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
-        print(hasElevator);
-        print(hasParking);
-        print(hasStoreRoom);
       },
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -83,8 +81,10 @@ class _ThirdStepAddAdScreenState extends State<ThirdStepAddAdScreen> {
                                       color: MyColors.lightGrey1,
                                       borderRadius: BorderRadius.circular(4),
                                     ),
-                                    child: 'خیابان صیاد شیرازی'
-                                        .toText(color: MyColors.grey, size: 16),
+                                    child: 'خیابان صیاد شیرازی'.toText(
+                                        color: MyColors.grey,
+                                        size: 16,
+                                        overflow: TextOverflow.ellipsis),
                                   ),
                                 ),
                                 25.0.toHorizontalSpace(),
@@ -102,8 +102,9 @@ class _ThirdStepAddAdScreenState extends State<ThirdStepAddAdScreen> {
                                       children: [
                                         Image.asset(MyImagesPath.downArrowIcon),
                                         Expanded(
-                                          child:
-                                              'فروش آپارتمان'.toText(size: 16,),
+                                          child: 'فروش آپارتمان'.toText(
+                                            size: 16,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -204,6 +205,14 @@ class _ThirdStepAddAdScreenState extends State<ThirdStepAddAdScreen> {
                           width: context.screenWidth(),
                           height: 48,
                           child: GenerateElevatedButton(
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const FourthStepAddAdScreen(),
+                                ),
+                              );
+                            },
                             child: 'بعدی'.toText(
                               color: Colors.white,
                             ),

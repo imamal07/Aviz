@@ -70,6 +70,9 @@ class _SignupScreenState extends State<SignupScreen> {
               SizedBox(
                 height: 48,
                 child: GenerateElevatedButton(
+                  onPressed: () {
+                    
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

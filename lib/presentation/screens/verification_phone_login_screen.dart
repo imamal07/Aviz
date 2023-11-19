@@ -127,6 +127,9 @@ class _VerificationPhoneLoginScreenState
                 width: context.screenWidth(),
                 height: 50,
                 child: GenerateElevatedButton(
+                  onPressed: () {
+                    
+                  },
                   child: 'تایید ورود'.toText(
                     color: Colors.white,
                     size: 16,

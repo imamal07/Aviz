@@ -5,12 +5,14 @@ import '../../utils/constants.dart';
 class GenerateElevatedButton extends StatelessWidget {
   final Color backgrounColor;
   final Widget child;
-  const GenerateElevatedButton({super.key, this.backgrounColor = MyColors.red, required this.child});
+  final Function() onPressed;
+  const GenerateElevatedButton(
+      {super.key, this.backgrounColor = MyColors.red, required this.child, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
               side: const BorderSide(

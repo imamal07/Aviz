@@ -7,7 +7,7 @@ extension ToText on String {
           Color color = MyColors.darkGrey,
           FontWeight fontWeight = FontWeight.w400,
           TextAlign textAlign = TextAlign.right,
-          TextOverflow overflow = TextOverflow.ellipsis}) =>
+          TextOverflow overflow = TextOverflow.clip}) =>
       Text(
         this,
         textDirection: TextDirection.rtl,

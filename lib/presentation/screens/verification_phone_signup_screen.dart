@@ -126,6 +126,9 @@ class _VerificationPhoneSignupScreenState extends State<VerificationPhoneSignupS
                 width: context.screenWidth(),
                 height: 50,
                 child: GenerateElevatedButton(
+                  onPressed: () {
+                    
+                  },
                   child: 'تایید ثبت نام'.toText(
                     color: Colors.white,
                     size: 16,

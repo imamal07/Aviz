@@ -38,6 +38,7 @@ class MyImagesPath {
   static const String propertiesIcon = 'assets/images/properties-icon.png';
   static const String shareIcon = 'assets/images/share-icon.png';
   static const String upTriangleIcon = 'assets/images/up-triangle-icon.png';
+  static const String map = 'assets/images/maps.jpg';
 
   static const String hotAds1 = 'assets/images/hot_ads1.jpg';
   static const String hotAds2 = 'assets/images/hot_ads2.jpg';

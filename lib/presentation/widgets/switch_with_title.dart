@@ -5,7 +5,11 @@ import 'package:flutter/material.dart';
 import '../../utils/constants.dart';
 
 class GenerateSwitch extends StatelessWidget {
-  const GenerateSwitch({super.key, required this.value, required this.title,required this.onTap});
+  const GenerateSwitch(
+      {super.key,
+      required this.value,
+      required this.title,
+      required this.onTap});
   final bool value;
   final String title;
   final Function() onTap;
@@ -45,7 +49,10 @@ class GenerateSwitch extends StatelessWidget {
                 ).toAllPadding(value: 4),
               ),
             ),
-            title.toText(size: 16),
+            8.0.toHorizontalSpace(),
+            Expanded(
+              child: title.toText(size: 16),
+            ),
           ],
         ),
       ),

@@ -109,6 +109,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: SizedBox(
                     height: 40,
                     child: GenerateElevatedButton(
+                      onPressed: () {
+                        
+                      },
                       backgrounColor: Colors.white,
                       child: 'ورود'.toText(
                         color: MyColors.red,
@@ -122,6 +125,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: SizedBox(
                     height: 40,
                     child: GenerateElevatedButton(
+                      onPressed: () {
+                        
+                      },
                       child: 'ثبت نام'.toText(
                         color: Colors.white,
                         size: 16,
