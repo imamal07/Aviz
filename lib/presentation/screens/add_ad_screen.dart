@@ -49,7 +49,7 @@ class _AddAdScreenState extends State<AddAdScreen> {
                           });
                         } else {
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => ThirdStepAddAdScreen(),
+                            builder: (context) => const ThirdStepAddAdScreen(),
                           ));
                         }
                       },

@@ -1,3 +1,4 @@
+import 'package:aviz/presentation/screens/fifth_step_add_ad_screen.dart';
 import 'package:aviz/presentation/widgets/add_ad_screen_appbar.dart';
 import 'package:aviz/presentation/widgets/elevated_button.dart';
 import 'package:aviz/presentation/widgets/switch_with_title.dart';
@@ -47,8 +48,10 @@ class _FourthStepAddAdScreenState extends State<FourthStepAddAdScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
                 image: DecorationImage(
+                  colorFilter: ColorFilter.mode(
+                      MyColors.red.withOpacity(.4), BlendMode.color),
                   fit: BoxFit.cover,
-                  image: AssetImage(
+                  image: const AssetImage(
                     MyImagesPath.map,
                   ),
                 ),
@@ -91,7 +94,11 @@ class _FourthStepAddAdScreenState extends State<FourthStepAddAdScreen> {
                 child: 'بعدی'.toText(
                   color: Colors.white,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const FifthStepAddAdScreen(),
+                  ));
+                },
               ),
             )
           ],

@@ -9,6 +9,7 @@ class GenerateNormalTextField extends StatelessWidget {
     required this.hintText,
     required this.onchanged,
     required this.keyboardType,
+    this.minLine,
     this.horizontalContentPadding = 10,
   });
   final TextEditingController controller;
@@ -16,6 +17,7 @@ class GenerateNormalTextField extends StatelessWidget {
   final Function(String value) onchanged;
   final TextInputType keyboardType;
   final double horizontalContentPadding;
+  final int? minLine;
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +26,12 @@ class GenerateNormalTextField extends StatelessWidget {
       onChanged: onchanged,
       keyboardType: keyboardType,
       textAlign: TextAlign.right,
+      maxLines: minLine,
+      minLines: minLine,
+      textInputAction: (minLine == null) ? null : TextInputAction.newline,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(horizontal: horizontalContentPadding),
+        contentPadding: EdgeInsets.symmetric(
+            horizontal: horizontalContentPadding, vertical: 10),
         hintText: hintText,
         hintStyle: const TextStyle(
           color: MyColors.lightGrey,
