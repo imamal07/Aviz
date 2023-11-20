@@ -5,6 +5,8 @@ import 'package:aviz/utils/extensions/to_padding.dart';
 import 'package:aviz/utils/extensions/to_text.dart';
 import 'package:flutter/material.dart';
 
+import 'ad_detail_screen.dart';
+
 class AdsScreen extends StatelessWidget {
   const AdsScreen({super.key});
 
@@ -41,70 +43,73 @@ class AdsScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: MyTestList.hotAdsList.length,
                   itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Container(
-                          width: context.screenWidth() * .6,
-                          height: context.screenHeight() * .31,
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              const BoxShadow(
-                                color: Colors.white,
-                                blurRadius: 5,
-                                offset: Offset(0, 20),
-                              ),
-                              const BoxShadow(
-                                color: Colors.white,
-                                blurRadius: 5,
-                                offset: Offset(0, 20),
-                              ),
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(.05),
-                                blurRadius: 15,
-                                offset: const Offset(0, 30),
-                              ),
-                            ],
+                    return InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const AdDetailScreen(),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(2),
-                                child: Image.asset(
-                                  MyTestList.hotAdsList[index]['imagePath']!,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              16.0.toVerticalSpace(),
-                              MyTestList.hotAdsList[index]['title']!.toText(),
-                              8.0.toVerticalSpace(),
-                              MyTestList.hotAdsList[index]['description']!
-                                  .toText(
-                                size: 12,
-                                color: MyColors.lightGrey,
-                              ),
-                              16.0.toVerticalSpace(),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  'قیمت:'.toText(
-                                    size: 12,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                  MyTestList.hotAdsList[index]['price']!.toText(
-                                    color: MyColors.red,
-                                    size: 12,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                        );
+                      },
+                      child: Container(
+                        width: context.screenWidth() * .6,
+                        height: context.screenHeight() * .31,
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: [
+                            const BoxShadow(
+                              color: Colors.white,
+                              blurRadius: 5,
+                              offset: Offset(0, 20),
+                            ),
+                            const BoxShadow(
+                              color: Colors.white,
+                              blurRadius: 5,
+                              offset: Offset(0, 20),
+                            ),
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(.05),
+                              blurRadius: 15,
+                              offset: const Offset(0, 30),
+                            ),
+                          ],
                         ),
-                      ],
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(2),
+                              child: Image.asset(
+                                MyTestList.hotAdsList[index]['imagePath']!,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            16.0.toVerticalSpace(),
+                            MyTestList.hotAdsList[index]['title']!.toText(),
+                            8.0.toVerticalSpace(),
+                            MyTestList.hotAdsList[index]['description']!.toText(
+                              size: 12,
+                              color: MyColors.lightGrey,
+                            ),
+                            16.0.toVerticalSpace(),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                'قیمت:'.toText(
+                                  size: 12,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                MyTestList.hotAdsList[index]['price']!.toText(
+                                  color: MyColors.red,
+                                  size: 12,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     );
                   },
                   separatorBuilder: (BuildContext context, int index) {
@@ -130,75 +135,84 @@ class AdsScreen extends StatelessWidget {
               child: ListView.separated(
                 itemCount: MyTestList.recentAdsList.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                    padding: const EdgeInsets.all(16),
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Colors.white,
-                          blurRadius: 5,
-                          offset: Offset(0, 5),
+                  return InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const AdDetailScreen(),
                         ),
-                        const BoxShadow(
-                          color: Colors.white,
-                          blurRadius: 5,
-                          offset: Offset(0, 5),
-                        ),
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(.05),
-                          blurRadius: 15,
-                          offset: const Offset(0, 10),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(4),
-                            child: Image.asset(
-                              MyTestList.recentAdsList[index]['imagePath']!,
-                              fit: BoxFit.cover,
+                      );
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(16),
+                      margin: const EdgeInsets.symmetric(horizontal: 15),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          const BoxShadow(
+                            color: Colors.white,
+                            blurRadius: 5,
+                            offset: Offset(0, 5),
+                          ),
+                          const BoxShadow(
+                            color: Colors.white,
+                            blurRadius: 5,
+                            offset: Offset(0, 5),
+                          ),
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(.05),
+                            blurRadius: 15,
+                            offset: const Offset(0, 10),
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(4),
+                              child: Image.asset(
+                                MyTestList.recentAdsList[index]['imagePath']!,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
-                        ),
-                        16.0.toHorizontalSpace(),
-                        Expanded(
-                          flex: 2,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              MyTestList.recentAdsList[index]['title']!
-                                  .toText(),
-                              8.0.toVerticalSpace(),
-                              MyTestList.recentAdsList[index]['description']!
-                                  .toText(
-                                size: 12,
-                                color: MyColors.lightGrey,
-                              ),
-                              16.0.toVerticalSpace(),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  MyTestList.recentAdsList[index]['price']!
-                                      .toText(
-                                    color: MyColors.red,
-                                    size: 12,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                  'قیمت:'.toText(
-                                    size: 12,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
+                          16.0.toHorizontalSpace(),
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                MyTestList.recentAdsList[index]['title']!
+                                    .toText(),
+                                8.0.toVerticalSpace(),
+                                MyTestList.recentAdsList[index]['description']!
+                                    .toText(
+                                  size: 12,
+                                  color: MyColors.lightGrey,
+                                ),
+                                16.0.toVerticalSpace(),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    MyTestList.recentAdsList[index]['price']!
+                                        .toText(
+                                      color: MyColors.red,
+                                      size: 12,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                    'قیمت:'.toText(
+                                      size: 12,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   );
                 },

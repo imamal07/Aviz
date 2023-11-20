@@ -25,8 +25,10 @@ class MyImagesPath {
   static const String callIcon = 'assets/images/call-icon.png';
   static const String cameraIcon = 'assets/images/camera-icon.png';
   static const String categoryIcon = 'assets/images/category-icon.png';
-  static const String clipboardTextIcon = 'assets/images/clipboard-text-icon.png';
-  static const String documentUploadIcon = 'assets/images/document-upload-icon.png';
+  static const String clipboardTextIcon =
+      'assets/images/clipboard-text-icon.png';
+  static const String documentUploadIcon =
+      'assets/images/document-upload-icon.png';
   static const String downArrowIcon = 'assets/images/down-arrow.png';
   static const String downTriangleIcon = 'assets/images/down-triangle-icon.png';
   static const String informationIcon = 'assets/images/information-icon.png';
@@ -39,6 +41,7 @@ class MyImagesPath {
   static const String shareIcon = 'assets/images/share-icon.png';
   static const String upTriangleIcon = 'assets/images/up-triangle-icon.png';
   static const String map = 'assets/images/maps.jpg';
+  static const String adDetail1 = 'assets/images/ad_detail1.jpg';
 
   static const String hotAds1 = 'assets/images/hot_ads1.jpg';
   static const String hotAds2 = 'assets/images/hot_ads2.jpg';
@@ -114,5 +117,61 @@ class MyTestList {
     'فروش آپارتمان',
     'فروش خانه و ویلا',
     'فروش زمین و کلنگی',
+  ];
+
+  static const List<Map<String, String>> priceTabContentList = [
+    {
+      'title' : 'قیمت هر متر',
+      'value' : '۴۶٬۴۶۰٬۰۰۰',
+    },
+    {
+      'title' : 'قیمت کل',
+      'value' : '۲۳٬۲۳۰٬۰۰۰٬۰۰۰',
+    },
+  ];
+
+  static const List<Map<String, String>> featuresTabContentList = [
+    {
+      'title' : 'سند',
+      'value' : 'تک برگ',
+    },
+    {
+      'title' : 'جهت ساختمان',
+      'value' : 'شمالی',
+    },
+  ];
+
+
+
+  static const List<Map<String, String>> facilitiesTabContentList = [
+    
+    {
+      'title' : 'آسانسور',
+      'value' : '',
+    },
+    {
+      'title' : 'پارکینگ',
+      'value' : '',
+    },
+    {
+      'title' : 'انباری',
+      'value' : '',
+    },
+    {
+      'title' : 'بالکن',
+      'value' : '',
+    },
+    {
+      'title' : 'پنت هاوس',
+      'value' : '',
+    },
+    {
+      'title' : 'جنس کف سرامیک',
+      'value' : '',
+    },
+    {
+      'title' : 'سرویس بهداشتی ایرانی و فرهنگی',
+      'value' : '',
+    },
   ];
 }
