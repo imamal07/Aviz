@@ -21,118 +21,122 @@ class AdsScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                'مشاهده همه'.toText(
-                  color: MyColors.lightGrey,
-                ),
-                'آویز های داغ'.toText(
-                  fontWeight: FontWeight.w700,
-                  size: 16,
-                ),
-              ],
-            ).toSymmetricPadding(horizontal: 15),
-            SizedBox(
-              height: context.screenHeight() * .35,
-              child: Directionality(
-                textDirection: TextDirection.rtl,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: MyTestList.hotAdsList.length,
-                  itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const AdDetailScreen(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: context.screenWidth() * .6,
-                        height: context.screenHeight() * .31,
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            const BoxShadow(
-                              color: Colors.white,
-                              blurRadius: 5,
-                              offset: Offset(0, 20),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  'مشاهده همه'.toText(
+                    color: MyColors.lightGrey,
+                  ),
+                  'آویز های داغ'.toText(
+                    fontWeight: FontWeight.w700,
+                    size: 16,
+                  ),
+                ],
+              ).toSymmetricPadding(horizontal: 15),
+              SizedBox(
+                height: context.screenHeight() * .35,
+                child: Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: MyTestList.hotAdsList.length,
+                    itemBuilder: (context, index) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const AdDetailScreen(),
                             ),
-                            const BoxShadow(
-                              color: Colors.white,
-                              blurRadius: 5,
-                              offset: Offset(0, 20),
-                            ),
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(.05),
-                              blurRadius: 15,
-                              offset: const Offset(0, 30),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(2),
-                              child: Image.asset(
-                                MyTestList.hotAdsList[index]['imagePath']!,
-                                fit: BoxFit.cover,
+                          );
+                        },
+                        child: Container(
+                          width: context.screenWidth() * .6,
+                          height: context.screenHeight() * .31,
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              const BoxShadow(
+                                color: Colors.white,
+                                blurRadius: 5,
+                                offset: Offset(0, 20),
                               ),
-                            ),
-                            16.0.toVerticalSpace(),
-                            MyTestList.hotAdsList[index]['title']!.toText(),
-                            8.0.toVerticalSpace(),
-                            MyTestList.hotAdsList[index]['description']!.toText(
-                              size: 12,
-                              color: MyColors.lightGrey,
-                            ),
-                            16.0.toVerticalSpace(),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                'قیمت:'.toText(
-                                  size: 12,
-                                  fontWeight: FontWeight.w500,
+                              const BoxShadow(
+                                color: Colors.white,
+                                blurRadius: 5,
+                                offset: Offset(0, 20),
+                              ),
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(.05),
+                                blurRadius: 15,
+                                offset: const Offset(0, 30),
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(2),
+                                child: Image.asset(
+                                  MyTestList.hotAdsList[index]['imagePath']!,
+                                  fit: BoxFit.cover,
                                 ),
-                                MyTestList.hotAdsList[index]['price']!.toText(
-                                  color: MyColors.red,
-                                  size: 12,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ],
-                            ),
-                          ],
+                              ),
+                              16.0.toVerticalSpace(),
+                              MyTestList.hotAdsList[index]['title']!.toText(),
+                              8.0.toVerticalSpace(),
+                              MyTestList.hotAdsList[index]['description']!
+                                  .toText(
+                                size: 12,
+                                color: MyColors.lightGrey,
+                              ),
+                              16.0.toVerticalSpace(),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  'قیمت:'.toText(
+                                    size: 12,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                  MyTestList.hotAdsList[index]['price']!.toText(
+                                    color: MyColors.red,
+                                    size: 12,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  },
-                  separatorBuilder: (BuildContext context, int index) {
-                    return 16.0.toHorizontalSpace();
-                  },
+                      );
+                    },
+                    separatorBuilder: (BuildContext context, int index) {
+                      return 16.0.toHorizontalSpace();
+                    },
+                  ),
                 ),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                'مشاهده همه'.toText(
-                  color: MyColors.lightGrey,
-                ),
-                'آویز های اخیر'.toText(
-                  fontWeight: FontWeight.w700,
-                  size: 16,
-                ),
-              ],
-            ).toSymmetricPadding(horizontal: 15),
-            24.0.toVerticalSpace(),
-            Expanded(
-              child: ListView.separated(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  'مشاهده همه'.toText(
+                    color: MyColors.lightGrey,
+                  ),
+                  'آویز های اخیر'.toText(
+                    fontWeight: FontWeight.w700,
+                    size: 16,
+                  ),
+                ],
+              ).toSymmetricPadding(horizontal: 15),
+              24.0.toVerticalSpace(),
+              ListView.separated(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
                 itemCount: MyTestList.recentAdsList.length,
                 itemBuilder: (context, index) {
                   return InkWell(
@@ -220,9 +224,9 @@ class AdsScreen extends StatelessWidget {
                   return 16.0.toVerticalSpace();
                 },
               ),
-            ),
-          ],
-        ).toOnlyPadding(top: 15),
+            ],
+          ).toOnlyPadding(top: 15),
+        ),
       ),
     );
   }
