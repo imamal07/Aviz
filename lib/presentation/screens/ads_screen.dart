@@ -15,6 +15,7 @@ class AdsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const AvizLogoGenerated(backgroundColor: Colors.white),
         backgroundColor: Colors.white,
         elevation: 0,
@@ -40,7 +41,7 @@ class AdsScreen extends StatelessWidget {
                 height: context.screenHeight() * .36,
                 child: Directionality(
                   textDirection: TextDirection.rtl,
-                  child: ListView.separated(
+                  child: ListView.builder(
                     // padding:
                     //     EdgeInsets.only(bottom: context.screenHeight() * .04),
                     scrollDirection: Axis.horizontal,
@@ -59,27 +60,29 @@ class AdsScreen extends StatelessWidget {
                                 );
                               },
                               child: Container(
+                                margin: EdgeInsets.only(right: 16),
                                 width: context.screenWidth() * .6,
                                 height: context.screenHeight() * .31,
                                 alignment: Alignment.center,
                                 padding: const EdgeInsets.all(16),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
+                                  borderRadius: BorderRadius.circular(4),
                                   boxShadow: [
-                                    const BoxShadow(
-                                      color: Colors.white,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 20),
-                                    ),
-                                    const BoxShadow(
-                                      color: Colors.white,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 20),
-                                    ),
                                     BoxShadow(
-                                      color: Colors.grey.withOpacity(.05),
-                                      blurRadius: 15,
-                                      offset: const Offset(0, 30),
+                                      color: Colors.grey.withOpacity(.16),
+                                      blurRadius: 30,
+                                      offset: const Offset(0, 10),
+                                    ),
+                                    const BoxShadow(
+                                      color: Colors.white,
+                                      blurRadius: 10,
+                                      offset: Offset(0, -20),
+                                    ),
+                                    const BoxShadow(
+                                      color: Colors.white,
+                                      blurRadius: 30,
+                                      offset: Offset(0, -30),
                                     ),
                                   ],
                                 ),
@@ -130,9 +133,9 @@ class AdsScreen extends StatelessWidget {
                         ],
                       );
                     },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return 16.0.toHorizontalSpace();
-                    },
+                    // separatorBuilder: (BuildContext context, int index) {
+                    //   return 16.0.toHorizontalSpace();
+                    // },
                   ),
                 ),
               ),
@@ -167,21 +170,22 @@ class AdsScreen extends StatelessWidget {
                       margin: const EdgeInsets.symmetric(horizontal: 15),
                       decoration: BoxDecoration(
                         color: Colors.white,
+                        borderRadius: BorderRadius.circular(4),
                         boxShadow: [
-                          const BoxShadow(
-                            color: Colors.white,
-                            blurRadius: 5,
-                            offset: Offset(0, 5),
-                          ),
-                          const BoxShadow(
-                            color: Colors.white,
-                            blurRadius: 5,
-                            offset: Offset(0, 5),
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(.2),
+                            blurRadius: 10,
+                            offset: const Offset(0, 2),
                           ),
                           BoxShadow(
-                            color: Colors.grey.withOpacity(.05),
-                            blurRadius: 15,
-                            offset: const Offset(0, 10),
+                            color: Colors.white.withOpacity(.4),
+                            blurRadius: 5,
+                            offset: const Offset(0, -5),
+                          ),
+                          const BoxShadow(
+                            color: Colors.white,
+                            blurRadius: 10,
+                            offset: Offset(0, -5),
                           ),
                         ],
                       ),

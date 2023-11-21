@@ -3,6 +3,7 @@ import 'package:aviz/utils/extensions/to_padding.dart';
 import 'package:aviz/utils/extensions/to_text.dart';
 import 'package:flutter/material.dart';
 
+import '../../startup.dart';
 import '../../utils/constants.dart';
 import '../widgets/elevated_button.dart';
 import '../widgets/one_digit_textfield.dart';
@@ -127,7 +128,9 @@ class _VerificationPhoneSignupScreenState extends State<VerificationPhoneSignupS
                 height: 50,
                 child: GenerateElevatedButton(
                   onPressed: () {
-                    
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const MainScreen(),
+                    ));
                   },
                   child: 'تایید ثبت نام'.toText(
                     color: Colors.white,

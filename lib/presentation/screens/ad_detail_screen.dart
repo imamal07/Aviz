@@ -419,7 +419,7 @@ class GenerateTabContentList extends StatelessWidget {
 class HorizontalDashedLinePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    double dashWidth = 4, dashSpace = 2, startX = 0;
+    double dashWidth = 5, dashSpace = 4, startX = 0;
     final paint = Paint()
       ..color = MyColors.lightGrey1
       ..strokeWidth = 1;
@@ -438,7 +438,7 @@ class HorizontalDashedLinePainter extends CustomPainter {
 class VerticalDashedLinePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    double dashHeight = 4, dashSpace = 2, startY = 0;
+    double dashHeight = 5, dashSpace = 4, startY = 0;
     final paint = Paint()
       ..color = MyColors.lightGrey1
       ..strokeWidth = 1;

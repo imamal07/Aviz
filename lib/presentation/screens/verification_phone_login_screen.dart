@@ -1,5 +1,6 @@
 import 'package:aviz/presentation/widgets/elevated_button.dart';
 import 'package:aviz/presentation/widgets/one_digit_textfield.dart';
+import 'package:aviz/startup.dart';
 import 'package:aviz/utils/constants.dart';
 import 'package:aviz/utils/extensions/size_of_screen.dart';
 import 'package:aviz/utils/extensions/to_padding.dart';
@@ -128,7 +129,9 @@ class _VerificationPhoneLoginScreenState
                 height: 50,
                 child: GenerateElevatedButton(
                   onPressed: () {
-                    
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const MainScreen(),
+                    ));
                   },
                   child: 'تایید ورود'.toText(
                     color: Colors.white,

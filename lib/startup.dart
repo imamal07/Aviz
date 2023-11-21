@@ -19,13 +19,7 @@ class Startup extends StatefulWidget {
 }
 
 class _StartupState extends State<Startup> {
-  int selectedIndex = 3;
-  List navBarScreensList = const [
-    ProfileScreen(),
-    AddAdScreen(),
-    SearchScreen(),
-    AdsScreen(),
-  ];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +27,30 @@ class _StartupState extends State<Startup> {
       theme: ThemeData(
         fontFamily: 'Sh',
       ),
-      home: Scaffold(
+      home: const OnboardingScreen(),
+    );
+  }
+}
+
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  int selectedIndex = 3;
+  List navBarScreensList = const [
+    ProfileScreen(),
+    AddAdScreen(),
+    SearchScreen(),
+    AdsScreen(),
+  ];
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: const Color(0xffF9FAFB),
           type: BottomNavigationBarType.fixed,
@@ -79,7 +96,6 @@ class _StartupState extends State<Startup> {
           ],
         ).toOnlyPadding(bottom: 8),
         body: navBarScreensList[selectedIndex],
-      ),
-    );
+      );
   }
 }
