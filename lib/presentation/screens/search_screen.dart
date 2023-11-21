@@ -74,12 +74,12 @@ class _SearchScreenState extends State<SearchScreen> {
                           borderRadius: BorderRadius.circular(4),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.grey.withOpacity(.2),
-                              blurRadius: 10,
-                              offset: const Offset(0, 2),
+                              color: Colors.grey.withOpacity(.25),
+                              blurRadius: 25,
+                              offset: const Offset(0, 3),
                             ),
                             BoxShadow(
-                              color: Colors.white.withOpacity(.4),
+                              color: Colors.white.withOpacity(.6),
                               blurRadius: 5,
                               offset: const Offset(0, -5),
                             ),

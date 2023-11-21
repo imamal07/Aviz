@@ -35,74 +35,81 @@ class _FourthStepAddAdScreenState extends State<FourthStepAddAdScreen> {
               height: 4,
               color: MyColors.red,
             ),
-            32.0.toVerticalSpace(),
-            const GenerateTitleWithIcon(
-                title: 'موقعیت مکانی', iconPath: MyImagesPath.mapIcon),
-            16.0.toVerticalSpace(),
-            'بعد انتخاب محل دقیق روی نقشه میتوانید نمایش آن را فعال یا غیر فعال کید تا حریم خصوصی شما خفظ شود.'
-                .toText(color: MyColors.grey),
-            32.0.toVerticalSpace(),
-            Container(
-              height: context.screenHeight() * .2,
-              width: context.screenWidth(),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(4),
-                image: DecorationImage(
-                  colorFilter: ColorFilter.mode(
-                      MyColors.red.withOpacity(.4), BlendMode.color),
-                  fit: BoxFit.cover,
-                  image: const AssetImage(
-                    MyImagesPath.map,
-                  ),
-                ),
-              ),
-              alignment: Alignment.center,
-              child: SizedBox(
-                width: context.screenWidth() * .45,
-                height: 50,
-                child: GenerateElevatedButton(
-                  child: Row(
-                    children: [
-                      Image.asset(MyImagesPath.locationIcon),
-                      8.0.toHorizontalSpace(),
-                      Expanded(
-                        child: 'گرگان، صیاد شیرازی'.toText(
-                            color: Colors.white,
-                            overflow: TextOverflow.ellipsis),
+            Expanded(
+              child: Column(
+                children: [
+                  32.0.toVerticalSpace(),
+                  const GenerateTitleWithIcon(
+                      title: 'موقعیت مکانی', iconPath: MyImagesPath.mapIcon),
+                  16.0.toVerticalSpace(),
+                  'بعد انتخاب محل دقیق روی نقشه میتوانید نمایش آن را فعال یا غیر فعال کید تا حریم خصوصی شما خفظ شود.'
+                      .toText(color: MyColors.grey),
+                  32.0.toVerticalSpace(),
+                  Container(
+                    height: context.screenHeight() * .2,
+                    width: context.screenWidth(),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      image: DecorationImage(
+                        colorFilter: ColorFilter.mode(
+                            MyColors.red.withOpacity(.4), BlendMode.color),
+                        fit: BoxFit.cover,
+                        image: const AssetImage(
+                          MyImagesPath.map,
+                        ),
                       ),
-                    ],
+                    ),
+                    alignment: Alignment.center,
+                    child: SizedBox(
+                      width: context.screenWidth() * .45,
+                      height: 50,
+                      child: GenerateElevatedButton(
+                        child: Row(
+                          children: [
+                            Image.asset(MyImagesPath.locationIcon),
+                            8.0.toHorizontalSpace(),
+                            Expanded(
+                              child: 'گرگان، صیاد شیرازی'.toText(
+                                  color: Colors.white,
+                                  overflow: TextOverflow.ellipsis),
+                            ),
+                          ],
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
                   ),
-                  onPressed: () {},
-                ),
-              ),
-            ),
-            32.0.toVerticalSpace(),
-            GenerateSwitch(
-              value: showLocationAccurate,
-              title: 'موقعیت دقیق نقشه نمایش داده شود؟',
-              onTap: () {
-                setState(() {
-                  showLocationAccurate = !showLocationAccurate;
-                });
-              },
-            ),
-            const Spacer(),
-            SizedBox(
-              width: context.screenWidth(),
-              height: 50,
-              child: GenerateElevatedButton(
-                child: 'بعدی'.toText(
-                  color: Colors.white,
-                ),
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const FifthStepAddAdScreen(),
-                  ));
-                },
-              ),
+                  32.0.toVerticalSpace(),
+                  GenerateSwitch(
+                    value: showLocationAccurate,
+                    title: 'موقعیت دقیق نقشه نمایش داده شود؟',
+                    onTap: () {
+                      setState(() {
+                        showLocationAccurate = !showLocationAccurate;
+                      });
+                    },
+                  ),
+                  const Spacer(),
+                  SizedBox(
+                    width: context.screenWidth(),
+                    height: 50,
+                    child: GenerateElevatedButton(
+                      child: 'بعدی'.toText(
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const FifthStepAddAdScreen(),
+                        ));
+                      },
+                    ),
+                  ),
+                  20.0.toVerticalSpace(),
+                ],
+              ).toSymmetricPadding(horizontal: 15),
             )
           ],
-        ).toSymmetricPadding(vertical: 20, horizontal: 15),
+        ),
       ),
     );
   }
