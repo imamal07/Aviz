@@ -6,7 +6,13 @@ import '../../utils/constants.dart';
 import 'normal_textfield.dart';
 
 class GeneratePropertyTextField extends StatelessWidget {
-  const GeneratePropertyTextField({super.key, required this.title, required this.hint, required this.controller, required this.onChanged,});
+  const GeneratePropertyTextField({
+    super.key,
+    required this.title,
+    required this.hint,
+    required this.controller,
+    required this.onChanged,
+  });
 
   final String title, hint;
   final TextEditingController controller;
@@ -44,6 +50,7 @@ class GeneratePropertyTextField extends StatelessWidget {
                       onchanged: onChanged,
                       keyboardType: TextInputType.number,
                       horizontalContentPadding: 0,
+                      verticalContentPadding: 0,
                     ),
                   ),
                 )

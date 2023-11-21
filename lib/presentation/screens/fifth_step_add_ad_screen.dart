@@ -1,3 +1,4 @@
+import 'package:aviz/presentation/screens/ad_detail_screen.dart';
 import 'package:aviz/presentation/widgets/elevated_button.dart';
 import 'package:aviz/presentation/widgets/normal_textfield.dart';
 import 'package:aviz/presentation/widgets/switch_with_title.dart';
@@ -141,7 +142,11 @@ class _FifthStepAddAdScreenState extends State<FifthStepAddAdScreen> {
                         child: GenerateElevatedButton(
                           child:
                               'ثبت آگهی'.toText(color: Colors.white, size: 16),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const AdDetailScreen(),
+                            ));
+                          },
                         ),
                       ),
                       20.0.toVerticalSpace(),

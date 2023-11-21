@@ -1,4 +1,3 @@
-import 'package:aviz/presentation/widgets/add_ad_screen_appbar.dart';
 import 'package:aviz/utils/extensions/to_padding.dart';
 import 'package:aviz/utils/extensions/to_text.dart';
 import 'package:flutter/material.dart';

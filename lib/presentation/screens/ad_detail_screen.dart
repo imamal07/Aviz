@@ -152,44 +152,48 @@ class _AdDetailScreenState extends State<AdDetailScreen> {
                 ),
               ),
               Positioned(
-                bottom: 10,
+                bottom: 0,
                 width: context.screenWidth() - 30,
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Expanded(
-                      child: SizedBox(
-                        height: 48,
-                        child: GenerateElevatedButton(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              'اطلاعات تماس'.toText(color: Colors.white),
-                              10.0.toHorizontalSpace(),
-                              Image.asset(MyImagesPath.callIcon),
-                            ],
+                child: Container(
+                  color: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Expanded(
+                        child: SizedBox(
+                          height: 48,
+                          child: GenerateElevatedButton(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                'اطلاعات تماس'.toText(color: Colors.white),
+                                10.0.toHorizontalSpace(),
+                                Image.asset(MyImagesPath.callIcon),
+                              ],
+                            ),
+                            onPressed: () {},
                           ),
-                          onPressed: () {},
                         ),
                       ),
-                    ),
-                    25.0.toHorizontalSpace(),
-                    Expanded(
-                      child: SizedBox(
-                        height: 48,
-                        child: GenerateElevatedButton(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              'گفتگو'.toText(color: Colors.white),
-                              Image.asset(MyImagesPath.messageIcon),
-                            ],
+                      25.0.toHorizontalSpace(),
+                      Expanded(
+                        child: SizedBox(
+                          height: 48,
+                          child: GenerateElevatedButton(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                'گفتگو'.toText(color: Colors.white),
+                                Image.asset(MyImagesPath.messageIcon),
+                              ],
+                            ),
+                            onPressed: () {},
                           ),
-                          onPressed: () {},
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
