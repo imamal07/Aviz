@@ -2,6 +2,7 @@ import 'package:aviz/presentation/screens/add_ad_screen.dart';
 import 'package:aviz/presentation/screens/ads_screen.dart';
 import 'package:aviz/presentation/screens/login_screen.dart';
 import 'package:aviz/presentation/screens/onboarding_screen.dart';
+import 'package:aviz/presentation/screens/profile_screen.dart';
 import 'package:aviz/presentation/screens/signup_screen.dart';
 import 'package:aviz/presentation/screens/verification_phone_login_screen.dart';
 import 'package:aviz/presentation/screens/verification_phone_signup_screen.dart';
@@ -19,7 +20,7 @@ class Startup extends StatefulWidget {
 class _StartupState extends State<Startup> {
   int selectedIndex = 3;
   List navBarScreensList = const [
-    AdsScreen(),
+    ProfileScreen(),
     AddAdScreen(),
     AdsScreen(),
     AdsScreen(),

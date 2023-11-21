@@ -1,3 +1,5 @@
+import 'package:aviz/presentation/screens/login_screen.dart';
+import 'package:aviz/presentation/screens/signup_screen.dart';
 import 'package:aviz/presentation/widgets/aviz_logo.dart';
 import 'package:aviz/presentation/widgets/elevated_button.dart';
 import 'package:aviz/utils/constants.dart';
@@ -110,7 +112,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     height: 40,
                     child: GenerateElevatedButton(
                       onPressed: () {
-                        
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const LoginScreen(),
+                        ));
                       },
                       backgrounColor: Colors.white,
                       child: 'ورود'.toText(
@@ -126,7 +130,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     height: 40,
                     child: GenerateElevatedButton(
                       onPressed: () {
-                        
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const SignupScreen(),
+                        ));
                       },
                       child: 'ثبت نام'.toText(
                         color: Colors.white,

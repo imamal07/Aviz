@@ -42,6 +42,21 @@ class MyImagesPath {
   static const String upTriangleIcon = 'assets/images/up-triangle-icon.png';
   static const String map = 'assets/images/maps.jpg';
   static const String adDetail1 = 'assets/images/ad_detail1.jpg';
+  static const String profileCardIcon = 'assets/images/profile-card-icon.png';
+  static const String profileEyeIcon = 'assets/images/profile-eye-icon.png';
+  static const String profileInfoIcon = 'assets/images/profile-info-icon.png';
+  static const String profileMessageQuestionIcon =
+      'assets/images/profile-message-question-icon.png';
+  static const String profileNoteIcon = 'assets/images/profile-note-icon.png';
+  static const String profileProfileIcon =
+      'assets/images/profile-profile-icon.png';
+  static const String profileSaveIcon = 'assets/images/profile-save-icon.png';
+  static const String profileSettingIcon =
+      'assets/images/profile-setting-icon.png';
+  static const String profileEditIcon =
+      'assets/images/profile-edit-icon.png';
+  static const String profilePic =
+      'assets/images/profile_pic.jpg';
 
   static const String hotAds1 = 'assets/images/hot_ads1.jpg';
   static const String hotAds2 = 'assets/images/hot_ads2.jpg';
@@ -121,57 +136,54 @@ class MyTestList {
 
   static const List<Map<String, String>> priceTabContentList = [
     {
-      'title' : 'قیمت هر متر',
-      'value' : '۴۶٬۴۶۰٬۰۰۰',
+      'title': 'قیمت هر متر',
+      'value': '۴۶٬۴۶۰٬۰۰۰',
     },
     {
-      'title' : 'قیمت کل',
-      'value' : '۲۳٬۲۳۰٬۰۰۰٬۰۰۰',
+      'title': 'قیمت کل',
+      'value': '۲۳٬۲۳۰٬۰۰۰٬۰۰۰',
     },
   ];
 
   static const List<Map<String, String>> featuresTabContentList = [
     {
-      'title' : 'سند',
-      'value' : 'تک برگ',
+      'title': 'سند',
+      'value': 'تک برگ',
     },
     {
-      'title' : 'جهت ساختمان',
-      'value' : 'شمالی',
+      'title': 'جهت ساختمان',
+      'value': 'شمالی',
     },
   ];
 
-
-
   static const List<Map<String, String>> facilitiesTabContentList = [
-    
     {
-      'title' : 'آسانسور',
-      'value' : '',
+      'title': 'آسانسور',
+      'value': '',
     },
     {
-      'title' : 'پارکینگ',
-      'value' : '',
+      'title': 'پارکینگ',
+      'value': '',
     },
     {
-      'title' : 'انباری',
-      'value' : '',
+      'title': 'انباری',
+      'value': '',
     },
     {
-      'title' : 'بالکن',
-      'value' : '',
+      'title': 'بالکن',
+      'value': '',
     },
     {
-      'title' : 'پنت هاوس',
-      'value' : '',
+      'title': 'پنت هاوس',
+      'value': '',
     },
     {
-      'title' : 'جنس کف سرامیک',
-      'value' : '',
+      'title': 'جنس کف سرامیک',
+      'value': '',
     },
     {
-      'title' : 'سرویس بهداشتی ایرانی و فرهنگی',
-      'value' : '',
+      'title': 'سرویس بهداشتی ایرانی و فرهنگی',
+      'value': '',
     },
   ];
 }

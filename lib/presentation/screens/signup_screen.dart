@@ -1,3 +1,5 @@
+import 'package:aviz/presentation/screens/login_screen.dart';
+import 'package:aviz/presentation/screens/verification_phone_signup_screen.dart';
 import 'package:aviz/presentation/widgets/aviz_logo.dart';
 import 'package:aviz/presentation/widgets/elevated_button.dart';
 import 'package:aviz/presentation/widgets/normal_textfield.dart';
@@ -5,6 +7,7 @@ import 'package:aviz/utils/constants.dart';
 import 'package:aviz/utils/extensions/size_of_screen.dart';
 import 'package:aviz/utils/extensions/to_padding.dart';
 import 'package:aviz/utils/extensions/to_text.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -52,6 +55,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     setState(() {});
                   },
                   keyboardType: TextInputType.name,
+                  changeFillColor: true,
                 ),
               ),
               24.0.toVerticalSpace(),
@@ -64,6 +68,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     setState(() {});
                   },
                   keyboardType: TextInputType.phone,
+                  changeFillColor: true,
                 ),
               ),
               const Spacer(),
@@ -71,7 +76,10 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 48,
                 child: GenerateElevatedButton(
                   onPressed: () {
-                    
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          const VerificationPhoneSignupScreen(),
+                    ));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -91,16 +99,22 @@ class _SignupScreenState extends State<SignupScreen> {
                 width: context.screenWidth(),
                 child: RichText(
                   textAlign: TextAlign.center,
-                  text: const TextSpan(
+                  text: TextSpan(
                     text: 'قبلا ثبت نام کردی؟ ',
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontFamily: 'Sh',
                         color: MyColors.lightGrey,
                         fontWeight: FontWeight.w400),
                     children: [
                       TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const LoginScreen(),
+                            ));
+                          },
                         text: 'ورود',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontFamily: 'Sh',
                           fontSize: 14,
                           color: MyColors.red,

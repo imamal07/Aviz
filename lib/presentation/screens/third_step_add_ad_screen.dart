@@ -128,7 +128,9 @@ class _ThirdStepAddAdScreenState extends State<ThirdStepAddAdScreen> {
                                 title: 'تعداد اتاق',
                                 hint: '3',
                                 controller: roomInputController,
-                                onChanged: (value) {},
+                                onChanged: (value) {
+                                  setState(() {});
+                                },
                               ),
                             ),
                             25.0.toHorizontalSpace(),
@@ -137,7 +139,9 @@ class _ThirdStepAddAdScreenState extends State<ThirdStepAddAdScreen> {
                                 title: 'متراژ',
                                 hint: "220",
                                 controller: meterageInputController,
-                                onChanged: (value) {},
+                                onChanged: (value) {
+                                  setState(() {});
+                                },
                               ),
                             ),
                           ],
@@ -150,7 +154,9 @@ class _ThirdStepAddAdScreenState extends State<ThirdStepAddAdScreen> {
                                 title: 'سال ساخت',
                                 hint: '1391',
                                 controller: constructionInputController,
-                                onChanged: (value) {},
+                                onChanged: (value) {
+                                  setState(() {});
+                                },
                               ),
                             ),
                             25.0.toHorizontalSpace(),
@@ -159,7 +165,9 @@ class _ThirdStepAddAdScreenState extends State<ThirdStepAddAdScreen> {
                                 title: 'طبقه',
                                 hint: "4",
                                 controller: floorInputController,
-                                onChanged: (value) {},
+                                onChanged: (value) {
+                                  setState(() {});
+                                },
                               ),
                             ),
                           ],
